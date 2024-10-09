@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batagor - Warung Janggal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #8a7e67;
+            padding: 20px;
+            text-align: center;
+            color: rgb(12, 0, 0);
+            background-image: url('ning.png');
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: lighter;
+            letter-spacing: 1.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #8a7e67;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4f4533;
+            color: #fff;
+        }
+
+        nav ul li a.active {
+            background-color: #4f4533;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dish-section {
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #8a7e67;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WARUNG JANGGAL</h1>
+    <h2>Jajanan Anti Gagal</h2>
+    <nav>
+        <ul>
+            <li><a href="daftar.html">Beranda</a></li>
+            <li><a href="spesial.html">Spesial Menu</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="dish-section">
+        <h3>Batagor</h3>
+        <img src="batagor.jpeg" alt="Batagor">
+        <h4>Deskripsi</h4>
+        <p>Batagor adalah singkatan dari bakso tahu goreng, yaitu makanan khas Indonesia yang terbuat dari campuran tahu dan bakso ikan, kemudian digoreng hingga kecokelatan. Hidangan ini biasanya disajikan dengan saus kacang yang gurih dan sambal.</p>
+
+        <h4>Daerah Asal</h4>
+        <p>Batagor berasal dari Bandung, Jawa Barat. Makanan ini sangat populer dan sering dijadikan pilihan camilan atau makanan ringan di berbagai acara.</p>
+
+        <h4>Resep Batagor</h4>
+        <p>Berikut adalah resep sederhana untuk membuat Batagor:</p>
+        <ul>
+            <li><strong>Bahan:</strong>
+                <ul>
+                    <li>250 gram tahu putih, haluskan</li>
+                    <li>250 gram ikan tenggiri, haluskan</li>
+                    <li>1 butir telur</li>
+                    <li>3 siung bawang putih, haluskan</li>
+                    <li>1 sendok teh garam</li>
+                    <li>1 sendok teh merica bubuk</li>
+                    <li>Minyak untuk menggoreng</li>
+                    <p></p>
+                </ul>
+            </li>
+            <li><strong>Langkah-langkah:</strong>
+                <ol>
+                    <li>Campurkan tahu, ikan tenggiri, telur, bawang putih, garam, dan merica dalam sebuah wadah. Aduk hingga rata.</li>
+                    <li>Bentuk adonan menjadi bulatan kecil atau sesuai selera.</li>
+                    <li>Panaskan minyak dalam wajan, lalu goreng batagor hingga berwarna kecokelatan.</li>
+                    <li>Sajikan batagor dengan saus kacang dan sambal.</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
