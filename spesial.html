@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Tegal - Spesial Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #8a7e67;
+            padding: 20px;
+            text-align: center;
+            color: rgb(12, 0, 0);
+            background-image: url('ning.png');
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: lighter;
+            letter-spacing: 1.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #8a7e67;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4f4533;
+            color: #fff;
+        }
+
+        nav ul li a.active {
+            background-color: #4f4533;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .left-column {
+            width: 70%;
+            margin: 0 20px;
+        }
+
+        .right-column {
+            width: 30%;
+            margin: 0 20px;
+        }
+
+        .menu-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-list li {
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .menu-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h3 {
+            color: #8a7e67;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        img {
+            max-width: 45%;
+            border-radius: 8px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8a7e67;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #4f4533;
+        }
+
+        .popular-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .popular-section ul li {
+            padding: 10px 0;
+            color: #8a7e67;
+            font-size: 1.1em;
+        }
+
+        .contact-section p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+                margin: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WARUNG JANGGAL</h1>
+    <h2>Jajanan Anti Gagal</h2>
+    <nav>
+        <ul>
+            <li><a href="daftar.html">Beranda</a></li>
+            <li><a href="#" class="active">Spesial Menu</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="left-column">
+        <div class="menu-section">
+            <h3>Spesial Menu</h3>
+            <ul class="menu-list">
+                <li>
+                    <img src="taichan.jpeg" alt="Sate Taichan">
+                    <h4>Sate Taichan</h4>
+                    <p>Sate Taichan disajikan dengan daging ayam yang dibakar tanpa bumbu, lalu disajikan dengan sambal cabai pedas, jeruk nipis, dan taburan bawang goreng.</p>
+                </li>
+                <li>
+                    <img src="sio.jpg" alt="Siomay">
+                    <h4>Siomay</h4>
+                    <p>Siomay khas Bandung yang kenyal dan gurih, disajikan dengan saus kacang pedas dan jeruk limau segar.</p>
+                </li>
+                <li>
+                    <img src="lilit.jpg" alt="Sate Lilit">
+                    <h4>Sate Lilit</h4>
+                    <p>Sate Lilit daging ayam atau ikan  yang dicampur dengan kelapa parut, rempah-rempah, dan bumbu khas Bali.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <div class="popular-section">
+            <h3>Masakan Populer</h3>
+            <ul>
+                <li><a href="#">Sate Lilit</a></li>
+                <li><a href="#">Sate Ayam</a></li>
+                <li><a href="#">Sate Taichan</a></li>
+                <li><a href="#">Batagor</a></li>
+                <li><a href="#">Siomay</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h3>Kontak</h3>
+            <p><strong>Warung JANGGAL</strong></p>
+            <p>Jl. Dimana mana</p>
+            <p>Email: <a href="mailto:info@warungjanggal.com">info@warungjanggal.com</a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
