@@ -11,7 +11,7 @@
         }
         .container {
             margin-top: 50px;
-            background: #fedca1;
+            background: #FEEBC8;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -21,8 +21,39 @@
             margin-bottom: 30px;
             color: #8D6E63;
         }
+        label {
+            color: #5D4037;
+            font-weight: bold;
+        }
+        select {
+            background-color: #C8E6C9;
+            border: 1px solid #8D6E63;
+            color: #5D4037;
+        }
+        select:focus {
+            border-color: #5D4037;
+            outline: none;
+            box-shadow: 0 0 5px rgba(93, 64, 55, 0.5);
+        }
+        .btn-success {
+            background-color: #C8E6C9;
+            border: 1px solid #8D6E63;
+            color: #5D4037;
+            font-weight: bold;
+        }
+        .btn-success:hover {
+            background-color: #A5D6A7;
+            border-color: #5D4037;
+        }
         .table {
             margin-top: 30px;
+            background-color: #FFFAF0;
+        }
+        .table thead {
+            background-color: #FFECB3;
+        }
+        .table th, .table td {
+            color: #5D4037;
         }
     </style>
 </head>
@@ -72,7 +103,6 @@
             </tbody>
         </table>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const data = {
