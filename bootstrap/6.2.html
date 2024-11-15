@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Kode Pos Indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFFDE7;
+        }
+        .container {
+            margin-top: 50px;
+            background: #fedca1;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #8D6E63;
+        }
+        .table {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pencarian Kode Pos Indonesia</h2>
+        <form id="searchForm">
+            <div class="mb-3">
+                <label for="provinsi" class="form-label">Provinsi</label>
+                <select class="form-select" id="provinsi" required>
+                    <option value="">Pilih Provinsi</option>
+                    <option value="Jawa Timur">Jawa Timur</option>
+                    <option value="Jawa Barat">Jawa Barat</option>
+                    <option value="DKI Jakarta">DKI Jakarta</option>
+                    <option value="Jawa Tengah">Jawa Tengah</option>
+                    <option value="Sumatera Utara">Sumatera Utara</option>
+                    <option value="Bali">Bali</option>
+                    <option value="Kalimantan Timur">Kalimantan Timur</option>
+                    <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                    <option value="Aceh">Aceh</option>
+                    <option value="Papua">Papua</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="kabupaten" class="form-label">Kabupaten/Kota</label>
+                <select class="form-select" id="kabupaten" required>
+                    <option value="">Pilih Kabupaten/Kota</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="kecamatan" class="form-label">Kecamatan</label>
+                <select class="form-select" id="kecamatan" required>
+                    <option value="">Pilih Kecamatan</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Cari Kode Pos</button>
+        </form>
+
+        <table class="table table-bordered table-hover d-none" id="resultTable">
+            <thead>
+                <tr>
+                    <th>Kode Pos</th>
+                    <th>Informasi Daerah</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const data = {
+            "Jawa Timur": {
+                "Surabaya": {
+                    "Genteng": { kodePos: "60275", info: "Genteng, Surabaya, Jawa Timur" },
+                    "Gubeng": { kodePos: "60281", info: "Gubeng, Surabaya, Jawa Timur" },
+                    "Tegalsari": { kodePos: "60262", info: "Tegalsari, Surabaya, Jawa Timur" },
+                    "Simokerto": { kodePos: "60141", info: "Simokerto, Surabaya, Jawa Timur" },
+                    "Pabean Cantian": { kodePos: "60161", info: "Pabean Cantian, Surabaya, Jawa Timur" },
+                    "Krembangan": { kodePos: "60175", info: "Krembangan, Surabaya, Jawa Timur" },
+                    "Sukolilo": { kodePos: "60111", info: "Sukolilo, Surabaya, Jawa Timur" },
+                    "Tambaksari": { kodePos: "60136", info: "Tambaksari, Surabaya, Jawa Timur" },
+                    "Wonokromo": { kodePos: "60243", info: "Wonokromo, Surabaya, Jawa Timur" },
+                    "Rungkut": { kodePos: "60293", info: "Rungkut, Surabaya, Jawa Timur" }
+                },
+                "Malang": {
+                    "Blimbing": { kodePos: "65125", info: "Blimbing, Malang, Jawa Timur" },
+                    "Klojen": { kodePos: "65111", info: "Klojen, Malang, Jawa Timur" }
+                }
+            },
+            "Jawa Barat": {
+                "Bandung": {
+                    "Coblong": { kodePos: "40132", info: "Coblong, Bandung, Jawa Barat" },
+                    "Lengkong": { kodePos: "40263", info: "Lengkong, Bandung, Jawa Barat" }
+                },
+                "Bekasi": {
+                    "Bekasi Barat": { kodePos: "17144", info: "Bekasi Barat, Bekasi, Jawa Barat" },
+                    "Bekasi Timur": { kodePos: "17113", info: "Bekasi Timur, Bekasi, Jawa Barat" }
+                }
+            },
+            "DKI Jakarta": {
+                "Jakarta Pusat": {
+                    "Gambir": { kodePos: "10110", info: "Gambir, Jakarta Pusat, DKI Jakarta" },
+                    "Menteng": { kodePos: "10310", info: "Menteng, Jakarta Pusat, DKI Jakarta" }
+                }
+            },
+            "Jawa Tengah": {
+                "Semarang": {
+                    "Tembalang": { kodePos: "50275", info: "Tembalang, Semarang, Jawa Tengah" },
+                    "Banyumanik": { kodePos: "50268", info: "Banyumanik, Semarang, Jawa Tengah" }
+                }
+            },
+            "Sumatera Utara": {
+                "Medan": {
+                    "Medan Kota": { kodePos: "20211", info: "Medan Kota, Medan, Sumatera Utara" },
+                    "Medan Baru": { kodePos: "20153", info: "Medan Baru, Medan, Sumatera Utara" }
+                }
+            },
+            "Bali": {
+                "Denpasar": {
+                    "Denpasar Utara": { kodePos: "80116", info: "Denpasar Utara, Bali" },
+                    "Denpasar Timur": { kodePos: "80236", info: "Denpasar Timur, Bali" }
+                }
+            },
+            "Kalimantan Timur": {
+                "Balikpapan": {
+                    "Balikpapan Utara": { kodePos: "76125", info: "Balikpapan Utara, Kalimantan Timur" },
+                    "Balikpapan Selatan": { kodePos: "76115", info: "Balikpapan Selatan, Kalimantan Timur" }
+                }
+            },
+            "Sulawesi Selatan": {
+                "Makassar": {
+                    "Panakkukang": { kodePos: "90231", info: "Panakkukang, Makassar, Sulawesi Selatan" },
+                    "Tamalanrea": { kodePos: "90245", info: "Tamalanrea, Makassar, Sulawesi Selatan" }
+                }
+            },
+            "Aceh": {
+                "Banda Aceh": {
+                    "Baiturrahman": { kodePos: "23116", info: "Baiturrahman, Banda Aceh, Aceh" },
+                    "Kuta Alam": { kodePos: "23125", info: "Kuta Alam, Banda Aceh, Aceh" }
+                }
+            },
+            "Papua": {
+                "Jayapura": {
+                    "Abepura": { kodePos: "99351", info: "Abepura, Jayapura, Papua" },
+                    "Jayapura Selatan": { kodePos: "99223", info: "Jayapura Selatan, Papua" }
+                }
+            }
+        };
+
+        const provinsiSelect = document.getElementById("provinsi");
+        const kabupatenSelect = document.getElementById("kabupaten");
+        const kecamatanSelect = document.getElementById("kecamatan");
+
+        provinsiSelect.addEventListener("change", function () {
+            const selectedProvinsi = provinsiSelect.value;
+            kabupatenSelect.innerHTML = '<option value="">Pilih Kabupaten/Kota</option>';
+            kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+
+            if (selectedProvinsi && data[selectedProvinsi]) {
+                const kabupatens = Object.keys(data[selectedProvinsi]);
+                kabupatens.forEach(kabupaten => {
+                    const option = document.createElement("option");
+                    option.value = kabupaten;
+                    option.textContent = kabupaten;
+                    kabupatenSelect.appendChild(option);
+                });
+            }
+        });
+
+        kabupatenSelect.addEventListener("change", function () {
+            const selectedProvinsi = provinsiSelect.value;
+            const selectedKabupaten = kabupatenSelect.value;
+            kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+
+            if (selectedKabupaten && data[selectedProvinsi][selectedKabupaten]) {
+                const kecamatans = Object.keys(data[selectedProvinsi][selectedKabupaten]);
+                kecamatans.forEach(kecamatan => {
+                    const option = document.createElement("option");
+                    option.value = kecamatan;
+                    option.textContent = kecamatan;
+                    kecamatanSelect.appendChild(option);
+                });
+            }
+        });
+
+        const searchForm = document.getElementById("searchForm");
+        const resultTable = document.getElementById("resultTable");
+        const resultBody = document.getElementById("resultBody");
+
+        searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const selectedProvinsi = provinsiSelect.value;
+            const selectedKabupaten = kabupatenSelect.value;
+            const selectedKecamatan = kecamatanSelect.value;
+
+            if (
+                selectedProvinsi &&
+                selectedKabupaten &&
+                selectedKecamatan &&
+                data[selectedProvinsi][selectedKabupaten][selectedKecamatan]
+            ) {
+                const result = data[selectedProvinsi][selectedKabupaten][selectedKecamatan];
+                resultTable.classList.remove("d-none");
+                resultBody.innerHTML = `
+                    <tr>
+                        <td>${result.kodePos}</td>
+                        <td>${result.info}</td>
+                    </tr>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
