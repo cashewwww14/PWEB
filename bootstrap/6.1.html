@@ -54,7 +54,7 @@
             width: 50%;
             padding: 30px;
             box-sizing: border-box;
-            position: relative; /* Tambahkan ini untuk mengatur elemen posisi saran */
+            position: relative;
         }
 
         h2 {
@@ -105,7 +105,7 @@
 
         .autocomplete-suggestions {
             position: absolute;
-            top: calc(100% + 5px); /* Pastikan berada tepat di bawah input */
+            top: calc(80%);
             left: 0;
             right: 0;
             z-index: 1000;
@@ -115,7 +115,7 @@
             border: 1px solid #ddd;
             border-radius: 6px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: none; /* Awalnya disembunyikan */
+            display: none;
         }
 
         .autocomplete-suggestions div {
@@ -164,7 +164,6 @@
     </div>
 
     <script>
-        // Slideshow functionality
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slides img');
 
@@ -181,7 +180,6 @@
 
         setInterval(showSlides, 2000);
 
-        // Auto-suggestion functionality
         const namaMahasiswa = [
             "Ahmad Fauzi", "Budi Santoso", "Citra Dewi", "Dian Purnama", "Eka Putri", "Fitriani",
             "Gilang Saputra", "Hendra Wijaya", "Indah Permatasari", "Joko Susanto", "Kurniawan",
