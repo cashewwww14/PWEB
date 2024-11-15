@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Mahasiswa</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --light-bg: #f9f9fb;
+            --dark-bg: #e9e9ee;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .slide-container {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: none;
+            transition: opacity 1s;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        .form-container {
+            width: 50%;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative; /* Tambahkan ini untuk mengatur elemen posisi saran */
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #388E3C;
+        }
+
+        .autocomplete-suggestions {
+            position: absolute;
+            top: calc(100% + 5px); /* Pastikan berada tepat di bawah input */
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        .autocomplete-suggestions div {
+            padding: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .autocomplete-suggestions div:hover {
+            background-color: var(--dark-bg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide-container">
+            <div class="slides">
+                <img src="slide1.jpg" alt="Slide 1" class="active">
+                <img src="slide2.jpg" alt="Slide 2">
+                <img src="slide3.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Form Registrasi Mahasiswa</h2>
+            <form>
+                <div style="position: relative;">
+                    <label for="nama">Nama Mahasiswa:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama" autocomplete="off">
+                    <div id="suggestions" class="autocomplete-suggestions"></div>
+                </div>
+                <div>
+                    <label for="nim">NIM:</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan NIM">
+                </div>
+                <div>
+                    <label for="mata_kuliah">Mata Kuliah:</label>
+                    <input type="text" id="mata_kuliah" name="mata_kuliah" placeholder="Masukkan mata kuliah">
+                </div>
+                <div>
+                    <label for="dosen">Dosen:</label>
+                    <input type="text" id="dosen" name="dosen" placeholder="Masukkan nama dosen">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides img');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+
+        setInterval(showSlides, 2000);
+
+        // Auto-suggestion functionality
+        const namaMahasiswa = [
+            "Ahmad Fauzi", "Budi Santoso", "Citra Dewi", "Dian Purnama", "Eka Putri", "Fitriani",
+            "Gilang Saputra", "Hendra Wijaya", "Indah Permatasari", "Joko Susanto", "Kurniawan",
+            "Lestari", "Maria Ulfa", "Nanda Pratama", "Oki Ramdani", "Putra Nugraha", "Qori Ismail",
+            "Rian Firmansyah", "Siti Aminah", "Taufik Hidayat", "Umi Salamah", "Vivi Wijaya",
+            "Wahyu Prasetyo", "Yusuf Rizki", "Zahra Maulida"
+        ];
+
+        const inputNama = document.getElementById("nama");
+        const suggestionsContainer = document.getElementById("suggestions");
+
+        function showSuggestions(value) {
+            const filteredNames = namaMahasiswa.filter(nama => 
+                nama.toLowerCase().startsWith(value.toLowerCase())
+            );
+            
+            suggestionsContainer.innerHTML = "";
+            
+            if (filteredNames.length > 0 && value) {
+                suggestionsContainer.style.display = "block";
+                suggestionsContainer.style.width = inputNama.offsetWidth + 'px';
+                
+                filteredNames.forEach(name => {
+                    const suggestionItem = document.createElement("div");
+                    suggestionItem.textContent = name;
+                    suggestionItem.onclick = function() {
+                        inputNama.value = name;
+                        suggestionsContainer.innerHTML = "";
+                        suggestionsContainer.style.display = "none";
+                    };
+                    suggestionsContainer.appendChild(suggestionItem);
+                });
+            } else {
+                suggestionsContainer.style.display = "none";
+            }
+        }
+
+        inputNama.addEventListener("input", function() {
+            const value = inputNama.value;
+            showSuggestions(value);
+        });
+
+        document.addEventListener("click", function(e) {
+            if (e.target !== inputNama) {
+                suggestionsContainer.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
