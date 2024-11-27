@@ -1,0 +1,39 @@
+-- Membuat database kursus_bahasa jika belum ada
+CREATE DATABASE IF NOT EXISTS kursus_bahasa;
+
+-- Menggunakan database kursus_bahasa
+USE kursus_bahasa;
+
+-- Membuat tabel pegawai
+CREATE TABLE IF NOT EXISTS pegawai (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    jenis_kelamin ENUM('L', 'P') NOT NULL,
+    alamat TEXT NOT NULL,
+    no_telp VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    divisi VARCHAR(50) NOT NULL
+);
+
+-- Membuat tabel siswa
+CREATE TABLE IF NOT EXISTS siswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    alamat TEXT NOT NULL,
+    tanggal_lahir DATE NOT NULL,
+    jenis_kelamin ENUM('L', 'P') NOT NULL,
+    no_telp VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    pegawai_pendaftar_id INT,
+    FOREIGN KEY (pegawai_pendaftar_id) REFERENCES pegawai(id) ON DELETE SET NULL
+);
+
+-- Contoh data untuk tabel pegawai
+INSERT INTO pegawai (nama, jenis_kelamin, alamat, no_telp, email, divisi) VALUES
+('Ahmad Zaky', 'L', 'Jl. Raya No.1', '08123456789', 'ahmad@example.com', 'IT Support'),
+('Budi Setiawan', 'L', 'Jl. Merdeka No.10', '08987654321', 'budi@example.com', 'Trainer');
+
+-- Contoh data untuk tabel siswa
+INSERT INTO siswa (nama, alamat, tanggal_lahir, jenis_kelamin, no_telp, email, pegawai_pendaftar_id) VALUES
+('Sarah Dewi', 'Jl. Senja No.5', '2005-06-10', 'P', '08123456789', 'sarah@example.com', 1),
+('Toni Wijaya', 'Jl. Bahagia No.20', '2006-07-15', 'L', '08987654321', 'toni@example.com', 2);
