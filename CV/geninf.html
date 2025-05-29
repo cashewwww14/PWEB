@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Information - Ahmad Zaky Ash Shidqi</title>
+    <style>
+        body {
+            background: #f5f5dc url('doodle-art.png') no-repeat center;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #cf864e;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-section, .social-media-section {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            background-color: rgba(253, 238, 223, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skills-section:hover, .social-media-section:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-box {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-box img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-box:hover img {
+            transform: translateX(-50%) rotate(0deg);
+        }
+
+        .skill-name {
+            margin-top: 80px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-media-item {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-media-item:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-media-item img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 30px;
+            display: inline-block;
+            border-radius: 30px;
+            background-color: #e1a97e;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .links a:hover {
+            background-color: #cf864e;
+            transform: translateY(-5px);
+        }
+
+        .home-button {
+            background-color: #cf864e !important;
+        }
+
+        .home-button:hover {
+            background-color: #b4692f !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="skills-section">General Information</h1>
+
+    <div style="animation-delay: 0.2s;" class="skills-section">
+        <h2>Programming Skills</h2>
+        <div class="skills">
+            <div class="skill-box">
+                <img src="c-icon.jpeg" alt="C Icon">
+                <p class="skill-name">C</p>
+            </div>
+            <div class="skill-box">
+                <img src="cpp-icon.png" alt="C++ Icon">
+                <p class="skill-name">C++</p>
+            </div>
+            <div class="skill-box">
+                <img src="python-icon.png" alt="Python Icon">
+                <p class="skill-name">Python</p>
+            </div>
+            <div class="skill-box">
+                <img src="postgresql-icon.png" alt="PostgreSQL Icon">
+                <p class="skill-name">PostgreSQL</p>
+            </div>
+            <div class="skill-box">
+                <img src="html-icon.png" alt="HTML Icon">
+                <p class="skill-name">HTML</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="animation-delay: 0.4s;" class="social-media-section">
+        <h2>Social Media</h2>
+        <div class="social-media">
+            <a href="https://www.instagram.com/zakyshidqi/" target="_blank" class="social-media-item">
+                <img src="instagram-icon.jpeg" alt="Instagram Icon">
+            </a>
+            <a href="https://wa.me/628568421138" target="_blank" class="social-media-item">
+                <img src="whatsapp-icon.jpeg" alt="WhatsApp Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/zakyshidqi/" target="_blank" class="social-media-item">
+                <img src="linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+    </div>
+
+    <div style="animation-delay: 0.6s;" class="links">
+        <a class="home-button" href="index.html">Home</a>
+        <div>
+            <a href="education.html">Education</a>
+            <a href="biodata.html">Biodata</a>
+        </div>
+    </div>
+</body>
+</html>

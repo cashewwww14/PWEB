@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Ahmad Zaky Ash Shidqi</title>
+    <style>
+        body {
+            background-color: #F5F5DC;
+            background-image: url('doodle-art.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(253, 238, 223, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #e09963;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 5px solid #e09963;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e8b894;
+            color: #333;
+            font-weight: bold;
+        }
+        td {
+            background-color: #f3e3d7;
+            color: #333;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: space-between; 
+            bottom: 10px;
+            width: 96%;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 30px;
+            background-color: #e1a97e;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #cf864e;
+            transform: translateY(-5px);
+        }
+
+        .home-button {
+            background-color: #cf864e !important;
+        }
+
+        .home-button:hover {
+            background-color: #b4692f !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>About Me</h2>
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <td>Ahmad Zaky Ash Shidqi</td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td>August 14, 2005</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <th>Religion</th>
+                <td>Islam</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>Indonesian</td>
+            </tr>
+            <tr>
+                <th>Occupation</th>
+                <td>Student</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>zaky.shidqi14@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>Jl. Marina Emas Barat 6 No.20, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111</td>
+            </tr>
+        </table>
+
+        <div class="links">
+            <a class="home-button" href="index.html">Home</a>
+            <div>
+                <a href="education.html">Education</a>
+                <a href="geninf.html">General Information</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

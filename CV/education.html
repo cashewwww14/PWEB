@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Level - Ahmad Zaky Ash Shidqi</title>
+    <style>
+        body {
+            background-color: #F5F5DC;
+            background-image: url('doodle-art.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background-color: rgba(253, 238, 223, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #e09963;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .education-timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .box, .arrow {
+            margin: 15px;
+            position: relative;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 10px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .box img {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover img {
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .box p {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .box strong {
+            color: #e09963;
+            font-weight: bold;
+        }
+
+        .arrow {
+            width: 50px;
+            height: auto;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            bottom: 10px;
+            width: 96%;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 30px;
+            background-color: #e1a97e;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #cf864e;
+            transform: translateY(-5px);
+        }
+
+        .home-button {
+            background-color: #cf864e !important;
+        }
+
+        .home-button:hover {
+            background-color: #b4692f !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Education History</h2>
+        <div class="education-timeline">
+            <div class="box">
+                <img src="alazhar.png" alt="SDIT Al Azhar Syifa Budi Legenda">
+                <p><strong>SDIT Al Azhar Syifa Budi Legenda</strong></p>
+                <p>2012 - 2017</p>
+            </div>
+            <img src="arrow.png" alt="Arrow" class="arrow">
+            <div class="box">
+                <img src="dqm.png" alt="Pesantren Terpadu Darul Quran Mulia">
+                <p><strong>Pesantren Terpadu Darul Quran Mulia</strong></p>
+                <p>2017</p>
+            </div>
+            <img src="arrow.png" alt="Arrow" class="arrow">
+            <div class="box">
+                <img src="nfbs.png" alt="SMPIT Nurul Fikri">
+                <p><strong>SMPIT Nurul Fikri Boarding School Bogor</strong></p>
+                <p>2018 - 2020</p>
+            </div>
+            <img src="arrow.png" alt="Arrow" class="arrow">
+            <div class="box">
+                <img src="albayan.png" alt="SMAPU Al-Bayan">
+                <p><strong>SMAPU Al-Bayan Cibadak</strong></p>
+                <p>2020 - 2023</p>
+            </div>
+            <img src="arrow.png" alt="Arrow" class="arrow">
+            <div class="box" style="width: 350px;">
+                <img src="its.png" alt="Institut Teknologi Sepuluh Nopember">
+                <p style="line-height: 1.2;"><strong>Institut Teknologi Sepuluh Nopember</strong></p>
+                <p style="line-height: 1.2;">Informatics Engineering</p>
+                <p>2023 - now</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a class="home-button" href="index.html">Home</a>
+            <div>
+                <a href="biodata.html">Biodata</a>
+                <a href="geninf.html">General Information</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

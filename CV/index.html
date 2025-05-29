@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Zaky Ash Shidqi - CV</title>
+    <style>
+        body {
+            background-color: #f5f5dc;
+            background-image: url('doodle-art.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: rgba(253, 238, 223, 0.9);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile h2 {
+            font-size: 2.5rem;
+            color: #cf864e;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 25px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 30px;
+            background-color: #cf864e;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .links a:hover {
+            background-color: #b4692f;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="fotoku.jpg" alt="Ahmad Zaky Ash Shidqi">
+            <div>
+                <h2>Hi! I'm Ahmad Zaky Ash Shidqi</h2>
+                <p>I am a second-year Informatics Engineering student at Institut Teknologi Sepuluh Nopember. I'm a dedicated and adaptable person with a passion for learning and exploring new skills. My ability to adapt quickly allows me to confidently tackle new challenges. I thrive in collaborative environments, consistently contributing to inclusive work cultures and striving for superior performance in every opportunity I pursue.</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="biodata.html">Biodata</a>
+            <a href="education.html">Education</a>
+            <a href="geninf.html">General Information</a>
+        </div>
+    </div>
+</body>
+</html>
