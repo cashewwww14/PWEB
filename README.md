@@ -6,13 +6,9 @@ Berikut adalah daftar proyek dan folder yang terdapat dalam repository ini, masi
 - [CV](https://cashewwww14.github.io/PWEB/CV/index.html)  
   Proyek halaman CV pribadi menggunakan HTML dan CSS.
 
-- Proyek akhir untuk mata kuliah Pemrograman Web.
+- Proyek akhir untuk mata kuliah Pemrograman Web berbasis php. Fullstack, include php, SQL, java, dsb.
   
-  Berbasis php.
-
-- Sistem pendaftaran kursus pegawai.
-
-  Berbasis php.
+- Sistem pendaftaran kursus pegawai berbasis php dan SQL.
 
 - [Mid Project](https://cashewwww14.github.io/PWEB/Mid%20Project/daftar.html)  
   Proyek tengah semester Pemrograman Web.
@@ -23,14 +19,11 @@ Berikut adalah daftar proyek dan folder yang terdapat dalam repository ini, masi
 - [CSS](https://cashewwww14.github.io/PWEB/css/html.html)  
   Kumpulan style CSS untuk berbagai proyek.
 
-- [Kursus Bahasa](https://cashewwww14.github.io/PWEB/kursus%20bahasa/index.html)  
-  Website pendaftaran kursus bahasa.
+- Website pendaftaran kursus bahasa berbasis php dan SQL.
 
-- [Kursus + Foto](https://cashewwww14.github.io/PWEB/kursus+foto/index.html)  
-  Kursus online dengan fitur upload foto.
+- Kursus online dengan fitur upload foto berbasis php dan SQL.
 
-- [PDF (list siswa)](https://cashewwww14.github.io/PWEB/pdf/list_siswa.php)  
-  Halaman PHP untuk menampilkan daftar siswa dalam format PDF.
+- Halaman PHP untuk menampilkan daftar siswa dalam format PDF.
 
 - [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)  
   Proyek simulasi website restoran.
