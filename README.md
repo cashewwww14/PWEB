@@ -17,10 +17,10 @@ Berikut adalah daftar proyek dan folder yang terdapat dalam repository ini, masi
 - [Mid Project](https://cashewwww14.github.io/PWEB/Mid%20Project/daftar.html)  
   Proyek tengah semester Pemrograman Web.
 
-- [Bootstrap](https://cashewwww14.github.io/PWEB/bootstrap/index.html)  
+- [Bootstrap](https://cashewwww14.github.io/PWEB/bootstrap/6.1.html)  
   Contoh penggunaan Bootstrap dalam web responsif.
 
-- [CSS](https://cashewwww14.github.io/PWEB/css/index.html)  
+- [CSS](https://cashewwww14.github.io/PWEB/css/html.html)  
   Kumpulan style CSS untuk berbagai proyek.
 
 - [Kursus Bahasa](https://cashewwww14.github.io/PWEB/kursus%20bahasa/index.html)  
