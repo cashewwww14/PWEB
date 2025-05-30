@@ -1,29 +1,41 @@
 # Ahmad Zaky Ash Shidqi - 5025231229
-Berikut adalah daftar proyek dan folder yang terdapat dalam repository ini, masing-masing dilengkapi dengan link untuk melihat langsung hasilnya melalui GitHub Pages.
+
+Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, yang mencakup pembelajaran:
+
+* Dasar-dasar **HTML** dan **HTML5**
+* Styling menggunakan **CSS**, termasuk framework seperti **Tailwind CSS** dan **Bootstrap**
+* Pemrograman backend dengan **PHP**
+* Pengelolaan data menggunakan **SQL**
+* Hosting halaman menggunakan **GitHub Pages**
 
 ## Daftar Proyek
 
-- [CV](https://cashewwww14.github.io/PWEB/CV/index.html)  
-  Proyek halaman CV pribadi menggunakan HTML dan CSS.
+* [CV](https://cashewwww14.github.io/PWEB/CV/index.html)
+  Halaman CV pribadi menggunakan HTML dan CSS.
 
-- Proyek akhir untuk mata kuliah Pemrograman Web berbasis php. Fullstack, include php, SQL, java, dsb.
-  
-- Sistem pendaftaran kursus pegawai berbasis php dan SQL.
+* **Proyek Akhir Pemrograman Web**
+  Aplikasi fullstack menggunakan PHP, SQL, JavaScript, dsb.
 
-- [Mid Project](https://cashewwww14.github.io/PWEB/Mid%20Project/daftar.html)  
-  Proyek tengah semester Pemrograman Web.
+* **Sistem Pendaftaran Kursus Pegawai**
+  Aplikasi berbasis PHP dan SQL untuk pendaftaran dan manajemen data pegawai.
 
-- [Bootstrap](https://cashewwww14.github.io/PWEB/bootstrap/6.1.html)  
-  Contoh penggunaan Bootstrap dalam web responsif.
+* [Mid Project](https://cashewwww14.github.io/PWEB/Mid%20Project/daftar.html)
+  Proyek tengah semester dengan form pendaftaran dinamis.
 
-- [CSS](https://cashewwww14.github.io/PWEB/css/html.html)  
-  Kumpulan style CSS untuk berbagai proyek.
+* [Bootstrap](https://cashewwww14.github.io/PWEB/bootstrap/6.1.html)
+  Contoh implementasi tampilan responsif menggunakan Bootstrap.
 
-- Website pendaftaran kursus bahasa berbasis php dan SQL.
+* [CSS](https://cashewwww14.github.io/PWEB/css/html.html)
+  Kumpulan eksperimen style dengan CSS.
 
-- Kursus online dengan fitur upload foto berbasis php dan SQL.
+* **Website Pendaftaran Kursus Bahasa**
+  Aplikasi menggunakan PHP dan SQL.
 
-- Halaman PHP untuk menampilkan daftar siswa dalam format PDF.
+* **Kursus Online + Upload Foto**
+  Fitur tambahan untuk upload gambar peserta.
 
-- [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)  
-  Proyek simulasi website restoran.
+* **Halaman PHP + Output PDF**
+  Menampilkan data siswa dalam format PDF.
+
+* [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)
+  Simulasi website restoran dengan fitur daftar menu dan pendaftaran.
