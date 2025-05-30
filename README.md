@@ -40,7 +40,10 @@ Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, y
 * [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)
   Simulasi website restoran dengan fitur daftar menu dan pendaftaran.
 
-# Author
+## Author
 
-Ahmad Zaky Ash Shidqi — Informatics Engineering Institut Teknologi Sepuluh Nopember (ITS)
+Ahmad Zaky Ash Shidqi — Informatics Engineering
+
+Institut Teknologi Sepuluh Nopember (ITS)
+
 ---
