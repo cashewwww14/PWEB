@@ -1,4 +1,4 @@
-# Ahmad Zaky Ash Shidqi - 5025231229
+# Web Programming
 
 Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, yang mencakup pembelajaran:
 
@@ -39,3 +39,8 @@ Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, y
 
 * [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)
   Simulasi website restoran dengan fitur daftar menu dan pendaftaran.
+
+# Author
+
+Ahmad Zaky Ash Shidqi — Informatics Engineering Institut Teknologi Sepuluh Nopember (ITS)
+---
