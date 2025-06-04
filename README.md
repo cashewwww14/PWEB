@@ -10,7 +10,7 @@ Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, y
 
 ## Daftar Proyek
 
-* [CV](https://cashewwww14.github.io/PWEB/CV/index.html)
+* [CV](https://cashewwww14.github.io/Web-Programming/CV/index.html)
   Halaman CV pribadi menggunakan HTML dan CSS.
 
 * **Proyek Akhir Pemrograman Web**
@@ -19,13 +19,13 @@ Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, y
 * **Sistem Pendaftaran Kursus Pegawai**
   Aplikasi berbasis PHP dan SQL untuk pendaftaran dan manajemen data pegawai.
 
-* [Mid Project](https://cashewwww14.github.io/PWEB/Mid%20Project/daftar.html)
+* [Mid Project](https://cashewwww14.github.io/Web-Programming/Mid%20Project/daftar.html)
   Proyek tengah semester dengan form pendaftaran dinamis.
 
-* [Bootstrap](https://cashewwww14.github.io/PWEB/bootstrap/6.1.html)
+* [Bootstrap](https://cashewwww14.github.io/Web-Programming/bootstrap/6.1.html)
   Contoh implementasi tampilan responsif menggunakan Bootstrap.
 
-* [CSS](https://cashewwww14.github.io/PWEB/css/html.html)
+* [CSS](https://cashewwww14.github.io/Web-Programming/css/html.html)
   Kumpulan eksperimen style dengan CSS.
 
 * **Website Pendaftaran Kursus Bahasa**
@@ -37,7 +37,7 @@ Repository ini merupakan kumpulan proyek dari mata kuliah **Pemrograman Web**, y
 * **Halaman PHP + Output PDF**
   Menampilkan data siswa dalam format PDF.
 
-* [Web Resto](https://cashewwww14.github.io/PWEB/web%20resto/daftar.html)
+* [Web Resto](https://cashewwww14.github.io/Web-Programming/web%20resto/daftar.html)
   Simulasi website restoran dengan fitur daftar menu dan pendaftaran.
 
 ## Author
